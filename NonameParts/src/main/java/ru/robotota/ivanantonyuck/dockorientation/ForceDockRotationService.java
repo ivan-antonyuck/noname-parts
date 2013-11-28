@@ -22,7 +22,10 @@ public class ForceDockRotationService extends Service {
     public void onCreate() {
         orientationChanger = new LinearLayout(this);
 
-        WindowManager.LayoutParams params = new WindowManager.LayoutParams(WindowManager.LayoutParams.TYPE_SYSTEM_OVERLAY, WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE, PixelFormat.RGBA_8888);
+        WindowManager.LayoutParams params = new WindowManager.LayoutParams(
+        		WindowManager.LayoutParams.TYPE_SYSTEM_OVERLAY, 
+        		WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE, 
+        		PixelFormat.RGBA_8888);
         params.screenOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE;
 
         WindowManager window = getWindowManager();
